@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input [(ngModel)]="user"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input [(ngModel)]="mail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" id="pass" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Verificar contraseña</ion-label>
+      <ion-input type="password" id="pass" [(ngModel)]="passwordCheck"></ion-input>
+    </ion-item> 
+    <br>
+    <div id="tyc">
+      <ion-checkbox color="success" labelPosition="end"></ion-checkbox>
+      <ion-text color="tertiary">Aceptar los terminos y condiciones</ion-text>
+    </div> <br>
+    <div>
+      <ion-button (click)="signin()">Iniciar sesion</ion-button>
+      <ion-text color="primary">Ya estas registrado? Inicia sesion</ion-text>
+    </div>
+  </div>
+    <!--aqui termina el formulario-->
+
+</ion-content>

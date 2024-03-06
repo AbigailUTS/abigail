@@ -1,0 +1,18 @@
+#superior{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  align-items: center;
+  align-content: center;
+}
+#top{
+    display: flex;
+      flex-direction: row;
+}
+#inferior{
+    display: flex;
+      flex-direction: row;
+}
+ion-input:hover{
+  --background: #fc361c;//el color que sea
+}

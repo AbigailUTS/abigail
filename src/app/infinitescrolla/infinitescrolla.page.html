@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>infinitescrolla</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">infinitescrolla</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="top">
+    <!-- nombre,categoria,precio,cantidad stock proveedor,fecha ingreso-->
+    <div id="superior">
+      <ion-item>
+        <ion-label position="floating">nombre</ion-label>
+        <ion-input [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">categoria</ion-label>
+        <ion-input [(ngModel)]="categoria"></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-label position="floating">cantidad</ion-label>
+        <ion-input [(ngModel)]="cantidad"></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-label position="floating">provedor</ion-label>
+        <ion-input [(ngModel)]="provedor"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">precio</ion-label>
+        <ion-input [(ngModel)]="precio"></ion-input>
+      </ion-item>
+    <!-- </div>
+    <div id="inferior"> -->
+      <ion-item>
+        <ion-label position="floating">fecha de ingreso</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">cantidad stock</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-button (click)="guardarDatos()">enviar</ion-button>
+      <ion-item></ion-item>
+    </div>
+  </div>
+  <div>
+    <ion-list>
+      <ion-item *ngFor="let item of items;let index">
+        <ion-avatar slot="start">
+          <img [src]="'https://picsum.photos/80/80?random=' + index" alt="" />
+        </ion-avatar>
+        <ion-label slot="start">mensaje nuevo {{item}}</ion-label>
+        <ion-label slot="end">11:56am</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+  <ion-infinite-scroll (onInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

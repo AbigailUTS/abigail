@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">quiz</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngIf="currentQuestionIndex < questions.length" class="quiz">
+    <h3>{{currentQuestion()}}</h3>
+    <div class="quizButtons">
+      <ion-button
+        *ngFor="let option of answersOptions[currentQuestionIndex]"
+        (click)="nextQuestion(option)"
+        color="tertiary"
+        >{{ option }}</ion-button
+      >
+    </div>
+  </div>
+
+  <div *ngIf="showResults" class="resultados">
+    <h2>{{ result }}</h2>
+    <img src="{{imagePath}}" alt="No IMG" />
+    <p>{{ description }}</p>
+  </div>
+</ion-content>

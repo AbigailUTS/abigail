@@ -1,0 +1,94 @@
+// @import '~bootstrap/scss/bootstrap-reboot';
+// @import '~bootstrap/scss/bootstrap-grid';
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* global styles */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.page-padding {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.container-large {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100rem;
+}
+
+.paddin-large {
+  padding: 1rem;
+}
+
+.section__sticky {
+  position: sticky;
+  top: 0rem;
+}
+
+.section__one {
+  background-color: #fff;
+  height: 100vh;
+  z-index: 1;
+}
+
+.section__two {
+  background-color: #fff;
+  height: 100vh;
+  z-index: 1;
+}
+
+.card__container {
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// .game__table {
+//   height: 80vh;
+// }
+
+
+
+
+@media (min-width: 200px) {
+  .game__table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 600px) {
+  .game__table {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+@media (min-width: 900px) {
+  .game__table {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.game {
+  &__table {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+  &__img--card {
+    cursor: pointer;
+    transition: 0.3s;
+    height: 25vh;
+
+    &:hover {
+      position: relative;
+      top: -0.5rem;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(179, 236, 230, 0.89);
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+  border-radius: 15px;
+  padding: 10px;
+}
+.quizButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.resultados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: 10px;
+  border-radius: 15px;
+  width: 50%;
+  background-color: rgba(172, 171, 171, 0.89);
+  padding: 20px;
+}
+.resultados img {
+  width: 70%;
+}
+
+ion-content {
+  --background: url("../../assets/background.jpg") repeat center center fixed;
+  background-size: cover;
+}
+
+@media (min-width: 200px) {
+  .quiz {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    padding-top: 2px;
+    justify-content: space-around;
+  }
+  h3 {
+    margin-top: 0px;
+    padding: 30px;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .quizButtons {
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+  }
+  .quizButtons ion-button {
+    height: 5vh;
+    width: 80vw;
+    padding-left: -5vw;
+    font-size: 2rem;
+    // margin-left: 5vw;
+  }
+  .resultados {
+    margin-left: 5%;
+    width: 90%;
+    margin-bottom: 1vh;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  .resultados p {
+    font-size: 2rem;
+  }
+}

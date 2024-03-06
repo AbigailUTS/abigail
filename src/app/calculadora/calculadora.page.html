@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-input type="text" [(ngModel)]="display" class="calculator-display"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(1)" class="calculator-button">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(2)"class="calculator-button">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(3)"class="calculator-button">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0" (click)="clear()"class="calculator-button">Borrar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(4)"class="calculator-button">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(5)"class="calculator-button">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(6)"class="calculator-button">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addOperator('/')"class="calculator-button">/</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(7)"class="calculator-button">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(8)"class="calculator-button">8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(9)"class="calculator-button">9</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addOperator('*')"class="calculator-button">x</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addNumber(0)"class="calculator-button">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addDecimal()"class="calculator-button">.</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addOperator('+')"class="calculator-button">+</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="addOperator('-')"class="calculator-button">-</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="#d283e0"(click)="calculate()"class="calculator-button">=</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

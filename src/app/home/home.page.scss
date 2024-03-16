@@ -25,3 +25,10 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content{
+  --background:url('../../assets/fondopas.png')
+}
+ion-toolbar{
+  --background: rgb(141, 215, 230);
+}

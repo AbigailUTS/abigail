@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AdminFormularioPageModule } from './admin-formulario/admin-formulario.module';
 
 const routes: Routes = [
   {
@@ -51,6 +52,34 @@ const routes: Routes = [
     loadChildren: () =>
       import('./calculadora/calculadora.module').then(
         (m) => m.CalculadoraPageModule
+      ),
+  },
+  {
+    path: 'admin-formulario',
+    loadChildren: () =>
+      import('./admin-formulario/admin-formulario.module').then(
+        (m) => m.AdminFormularioPageModule
+      ),
+  },
+  {
+    path: 'admin-respuestas',
+    loadChildren: () =>
+      import('./admin-respuestas/admin-respuestas.module').then(
+        (m) => m.AdminRespuestasPageModule
+      ),
+  },
+  {
+    path: 'conwaygame',
+    loadChildren: () =>
+      import('./conwaygame/conwaygame.module').then(
+        (m) => m.ConwaygamePageModule
+      ),
+  },
+  {
+    path: 'simple-algorithms',
+    loadChildren: () =>
+      import('./simple-algorithms/simple-algorithms.module').then(
+        (m) => m.SimpleAlgorithmsPageModule
       ),
   },
 ];

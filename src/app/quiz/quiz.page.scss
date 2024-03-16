@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(179, 236, 230, 0.89);
+  background-color: #f5fac1;
   width: 50%;
   margin-left: 25%;
   margin-top: 5%;
@@ -78,4 +78,10 @@ ion-content {
   .resultados p {
     font-size: 2rem;
   }
+  ion-content {
+  --background: url('../../assets/fondopas.png')
+}
+ion-toolbar {
+  --background: rgb(141, 215, 230);
+}
 }

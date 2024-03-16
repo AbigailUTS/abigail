@@ -19,7 +19,7 @@ export class JuegodememoriaPage implements OnInit {
   public cards: any = [];
   public cont_intentos = 0;
   public count_aciertos = 0;
-  public images_inact = '../../assets/imgs/back.jpg';
+  public images_inact = '../../assets/fondomemorama.png';
   public intentos = this.images.length * 3;
 
   constructor() {}

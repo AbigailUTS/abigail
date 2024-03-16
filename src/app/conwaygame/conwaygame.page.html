@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>conwaygame</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">conwaygame</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="Tablero">
+    <div id="fila" *ngFor="let fila of tablero">
+      <div id="celula" *ngFor="let celula of fila" [ngClass]="{'viva': celula, 'muerta': !celula}"></div>
+    </div>
+  </div>
+</ion-content>

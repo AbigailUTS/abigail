@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>admin-formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">admin-formulario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-input [(ngModel)]="titulo"></ion-input>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input [(ngModel)]="subtitulo"></ion-input>
+      </ion-card-content>
+    </ion-card>
+    <ion-card *ngFor="let c of contador;let i">
+      <ion-card-header>
+        {{c}}
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+          </div>
+          <div>
+          </div>
+          <ion-button (click)="eliminar(c)" class="eliminar" fill="clear"> eliminar </ion-button>
+        </ion-card-content>
+    </ion-card>
+    <ion-button (click)="agregar()" class="eliminar" fill="clear"> agregar</ion-button>
+  </div>
+</ion-content>

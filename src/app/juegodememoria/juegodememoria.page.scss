@@ -35,7 +35,7 @@
 }
 
 .section__two {
-  background-color: #fff;
+  // background-color: #fff;
   height: 100vh;
   z-index: 1;
 }
@@ -49,12 +49,20 @@
   justify-content: center;
   align-items: center;
 }
-// .game__table {
-//   height: 80vh;
+.mainContainer {
+  // height: 80vh;
+    // background-color: rgb(141, 215, 230);
+}
+
+// ion-content{
+//   --background: rgb(141, 215, 230);
 // }
-
-
-
+ion-content {
+  --background: url('../../assets/fondopas.png')
+}
+ion-toolbar {
+  --background: rgb(141, 215, 230);
+}
 
 @media (min-width: 200px) {
   .game__table {
@@ -73,7 +81,9 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
+img{
+  max-width: 70%;
+}
 .game {
   &__table {
     max-width: 100%;
@@ -84,11 +94,15 @@
   &__img--card {
     cursor: pointer;
     transition: 0.3s;
-    height: 25vh;
+    height: 20vh;
 
     &:hover {
       position: relative;
       top: -0.5rem;
     }
   }
+    ion-toolbar {
+      --background: rgb(141, 215, 230);
+    }
+
 }

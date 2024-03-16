@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>simple-algorithms</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="nav('/home')"> Home </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">simple-algorithms</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h1>Grafica</h1>
+  <div id="contenedor-graficas">
+    <plotly-plot [data]="grafica.data" [layout]="grafica.layout"></plotly-plot>
+  </div>
+  <h1>Numeros Primos</h1>
+  <div id="numprimos">
+    <div id="fila">
+        <div [id]="'celula'+primo" *ngFor="let primo of primes">
+
+        </div>
+    </div>
+  </div>
+  <h1>Fibonacci</h1>
+  <div id="fibonacci">
+    <div id="fila">
+        <div *ngFor="let nums of fibo">{{nums}}
+        </div>
+    </div>
+  </div>
+</ion-content>
